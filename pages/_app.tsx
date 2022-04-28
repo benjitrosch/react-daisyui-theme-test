@@ -1,8 +1,13 @@
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import { Theme } from 'react-daisyui'
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Theme dataTheme='dark'>
+      <Component {...pageProps} />
+    </Theme>
+  )
 }
 
 export default MyApp
